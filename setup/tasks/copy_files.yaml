@@ -1,10 +1,8 @@
 - name: Copy helm Binaries to Install Path
   ansible.builtin.copy:
-    src: "{{ item }}"
+    src: "{{ temporary_folder }}/helm/linux-amd64/helm"
     dest: "{{ install_path }}"
     mode: "0550"
     owner: "{{ ansible_env.SUDO_USER }}"
     group: "{{ ansible_env.SUDO_USER }}"
     remote_src: true
-  with_fileglob:
-    - "{{ temporary_folder }}/helm/bin/*"
