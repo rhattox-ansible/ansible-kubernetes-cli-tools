@@ -1,0 +1,14 @@
+- name: Extract Archive
+  block:
+    - name: Create helm Extraction Directory
+      ansible.builtin.file:
+        path: "{{ temporary_folder }}/helm"
+        state: directory
+        mode: "0755"
+
+    - name: Unarchive helm Tarball
+      ansible.builtin.unarchive:
+        src: "{{ temporary_folder }}/helm.tar.gz"
+        dest: "{{ temporary_folder }}/helm"
+        remote_src: true
+        mode: "0755"

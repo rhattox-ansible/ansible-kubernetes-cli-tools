@@ -1,0 +1,6 @@
+temporary_folder: "/tmp/ansible-kubernetes-cli-tools"
+
+install_path: /usr/local/bin
+
+helm_version: "3.17.4"
+helm_url: "https://get.helm.sh/helm-v{{ helm_version }}-linux-amd64.tar.gz"

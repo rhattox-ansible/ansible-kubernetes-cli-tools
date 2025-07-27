@@ -1,0 +1,17 @@
+- name: Setup Temporary Directory
+  ansible.builtin.include_tasks: setup_temporary_folder.yaml
+
+- name: Download Release
+  ansible.builtin.include_tasks: download_files.yaml
+
+- name: Extract Release
+  ansible.builtin.include_tasks: extract_files.yaml
+
+- name: Copy Binaries
+  ansible.builtin.include_tasks: copy_files.yaml
+
+- name: Post-Installation Setup
+  ansible.builtin.include_tasks: post_install.yaml
+
+- name: Cleanup Temporary Files
+  ansible.builtin.include_tasks: cleanup.yaml

@@ -1,0 +1,10 @@
+- name: Download Archive
+  block:
+    - name: Download helm Release Tarball
+      ansible.builtin.get_url:
+        url: "{{ helm_url }}"
+        dest: "{{ temporary_folder }}/helm.tar.gz"
+        mode: "0644"
+        force: false
+        validate_certs: true
+        timeout: 60
