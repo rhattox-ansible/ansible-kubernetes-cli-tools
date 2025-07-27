@@ -1,4 +1,4 @@
-- name: Copy helm Binaries to Install Path
+- name: "Copy: helm Binary to Install Path"
   ansible.builtin.copy:
     src: "{{ temporary_folder }}/helm/linux-amd64/helm"
     dest: "{{ install_path }}"
@@ -7,7 +7,7 @@
     group: "{{ ansible_env.SUDO_USER }}"
     remote_src: true
 
-- name: Copy kubectx Binaries to Install Path
+- name: "Copy: kubectx Binary to Install Path"
   ansible.builtin.copy:
     src: "{{ temporary_folder }}/kubectx"
     dest: "{{ install_path }}"
@@ -16,7 +16,7 @@
     group: "{{ ansible_env.SUDO_USER }}"
     remote_src: true
 
-- name: Copy kubens Binaries to Install Path
+- name: "Copy: kubens Binary to Install Path"
   ansible.builtin.copy:
     src: "{{ temporary_folder }}/kubens"
     dest: "{{ install_path }}"
@@ -25,7 +25,7 @@
     group: "{{ ansible_env.SUDO_USER }}"
     remote_src: true
 
-- name: Copy kubens Binaries to Install Path
+- name: "Copy: stern Binary to Install Path"
   ansible.builtin.copy:
     src: "{{ temporary_folder }}/stern/stern"
     dest: "{{ install_path }}"

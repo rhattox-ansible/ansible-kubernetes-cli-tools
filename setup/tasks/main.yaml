@@ -1,17 +1,17 @@
-- name: Setup Temporary Directory
+- name: "Setup: Create Temporary Directory"
   ansible.builtin.include_tasks: setup_temporary_folder.yaml
 
-- name: Download Release
+- name: "Download: All CLI Tool Releases"
   ansible.builtin.include_tasks: download_files.yaml
 
-- name: Extract Release
+- name: "Extract: All CLI Tool Archives"
   ansible.builtin.include_tasks: extract_files.yaml
 
-- name: Copy Binaries
+- name: "Copy: All CLI Tool Binaries to Install Path"
   ansible.builtin.include_tasks: copy_files.yaml
 
-- name: Post-Installation Setup
+- name: "Post-Install: Finalize Installation"
   ansible.builtin.include_tasks: post_install.yaml
 
-- name: Cleanup Temporary Files
+- name: "Cleanup: Remove Temporary Files"
   ansible.builtin.include_tasks: cleanup.yaml

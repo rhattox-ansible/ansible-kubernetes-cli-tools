@@ -1,4 +1,4 @@
-- name: Remove Temporary Directory
+- name: "Cleanup: Remove Temporary Directory"
   ansible.builtin.file:
     path: "{{ temporary_folder }}"
     state: absent

@@ -1,6 +1,6 @@
-- name: Download Archive
+- name: "Download: CLI Tool Archives"
   block:
-    - name: Download helm Release Tarball
+    - name: "Download: helm Release Tarball"
       ansible.builtin.get_url:
         url: "{{ helm_url }}"
         dest: "{{ temporary_folder }}/helm.tar.gz"
@@ -9,7 +9,7 @@
         validate_certs: true
         timeout: 60
 
-    - name: Download kubens Release
+    - name: "Download: kubens Release"
       ansible.builtin.get_url:
         url: "{{ kubens_url }}"
         dest: "{{ temporary_folder }}/kubens"
@@ -18,7 +18,7 @@
         validate_certs: true
         timeout: 60
 
-    - name: Download kubectx Release
+    - name: "Download: kubectx Release"
       ansible.builtin.get_url:
         url: "{{ kubectx_url }}"
         dest: "{{ temporary_folder }}/kubectx"
@@ -27,7 +27,7 @@
         validate_certs: true
         timeout: 60
 
-    - name: Download Stern Release
+    - name: "Download: stern Release"
       ansible.builtin.get_url:
         url: "{{ stern_url }}"
         dest: "{{ temporary_folder }}/stern.tar.gz"

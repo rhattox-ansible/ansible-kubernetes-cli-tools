@@ -1,4 +1,4 @@
-- name: Create helm Temporary Directory
+- name: "Setup: Create Temporary Directory"
   ansible.builtin.file:
     path: "{{ temporary_folder }}"
     state: directory
