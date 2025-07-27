@@ -4,3 +4,10 @@ install_path: /usr/local/bin
 
 helm_version: "3.17.4"
 helm_url: "https://get.helm.sh/helm-v{{ helm_version }}-linux-amd64.tar.gz"
+
+kubens_ctx_version: "0.9.5"
+kubens_url: https://github.com/ahmetb/kubectx/releases/download/v{{ kubens_ctx_version }}/kubens
+kubectx_url: https://github.com/ahmetb/kubectx/releases/download/v{{ kubens_ctx_version }}/kubectx
+
+stern_version: "1.32.0"
+stern_url: "https://github.com/stern/stern/releases/download/v1.32.0/stern_1.32.0_linux_amd64.tar.gz"

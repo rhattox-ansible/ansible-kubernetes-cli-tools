@@ -8,3 +8,30 @@
         force: false
         validate_certs: true
         timeout: 60
+
+    - name: Download kubens Release
+      ansible.builtin.get_url:
+        url: "{{ kubens_url }}"
+        dest: "{{ temporary_folder }}/kubens"
+        mode: "0644"
+        force: false
+        validate_certs: true
+        timeout: 60
+
+    - name: Download kubectx Release
+      ansible.builtin.get_url:
+        url: "{{ kubectx_url }}"
+        dest: "{{ temporary_folder }}/kubectx"
+        mode: "0644"
+        force: false
+        validate_certs: true
+        timeout: 60
+
+    - name: Download Stern Release
+      ansible.builtin.get_url:
+        url: "{{ stern_url }}"
+        dest: "{{ temporary_folder }}/stern.tar.gz"
+        mode: "0644"
+        force: false
+        validate_certs: true
+        timeout: 60

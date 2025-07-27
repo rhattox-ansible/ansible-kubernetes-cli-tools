@@ -12,3 +12,16 @@
         dest: "{{ temporary_folder }}/helm"
         remote_src: true
         mode: "0755"
+
+    - name: Create stern Extraction Directory
+      ansible.builtin.file:
+        path: "{{ temporary_folder }}/stern"
+        state: directory
+        mode: "0755"
+
+    - name: Unarchive stern Tarball
+      ansible.builtin.unarchive:
+        src: "{{ temporary_folder }}/stern.tar.gz"
+        dest: "{{ temporary_folder }}/stern"
+        remote_src: true
+        mode: "0755"
