@@ -11,4 +11,3 @@ kubectx_url: https://github.com/ahmetb/kubectx/releases/download/v{{ kubens_ctx_
 
 stern_version: "1.32.0"
 stern_url: "https://github.com/stern/stern/releases/download/v{{ stern_version }}/stern_{{ stern_version }}_linux_amd64.tar.gz"
-            
