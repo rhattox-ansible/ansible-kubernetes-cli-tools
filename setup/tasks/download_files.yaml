@@ -12,7 +12,7 @@
     - name: "Download: kubens Release"
       ansible.builtin.get_url:
         url: "{{ kubens_url }}"
-        dest: "{{ temporary_folder }}/kubens"
+        dest: "{{ temporary_folder }}/kubens.tar.gz"
         mode: "0644"
         force: false
         validate_certs: true
@@ -21,7 +21,7 @@
     - name: "Download: kubectx Release"
       ansible.builtin.get_url:
         url: "{{ kubectx_url }}"
-        dest: "{{ temporary_folder }}/kubectx"
+        dest: "{{ temporary_folder }}/kubectx.tar.gz"
         mode: "0644"
         force: false
         validate_certs: true

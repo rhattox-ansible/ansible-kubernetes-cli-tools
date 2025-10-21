@@ -6,8 +6,9 @@ helm_version: "3.17.4"
 helm_url: "https://get.helm.sh/helm-v{{ helm_version }}-linux-amd64.tar.gz"
 
 kubens_ctx_version: "0.9.5"
-kubens_url: https://github.com/ahmetb/kubectx/releases/download/v{{ kubens_ctx_version }}/kubens
-kubectx_url: https://github.com/ahmetb/kubectx/releases/download/v{{ kubens_ctx_version }}/kubectx
+kubens_url: https://github.com/ahmetb/kubectx/releases/download/v{{ kubens_ctx_version }}/kubens_v{{ kubens_ctx_version }}_linux_x86_64.tar.gz
+
+kubectx_url: https://github.com/ahmetb/kubectx/releases/download/v{{ kubens_ctx_version }}/kubectx_v{{ kubens_ctx_version }}_linux_x86_64.tar.gz
 
 stern_version: "1.32.0"
 stern_url: "https://github.com/stern/stern/releases/download/v{{ stern_version }}/stern_{{ stern_version }}_linux_amd64.tar.gz"

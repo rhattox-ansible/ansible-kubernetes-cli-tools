@@ -6,6 +6,20 @@
         state: directory
         mode: "0755"
 
+    - name: "Extract: Unarchive kubectx Tarball"
+      ansible.builtin.unarchive:
+        src: "{{ temporary_folder }}/kubectx.tar.gz"
+        dest: "{{ temporary_folder }}/"
+        remote_src: true
+        mode: "0755"
+
+    - name: "Extract: Unarchive kubens Tarball"
+      ansible.builtin.unarchive:
+        src: "{{ temporary_folder }}/kubens.tar.gz"
+        dest: "{{ temporary_folder }}/"
+        remote_src: true
+        mode: "0755"
+
     - name: "Extract: Unarchive helm Tarball"
       ansible.builtin.unarchive:
         src: "{{ temporary_folder }}/helm.tar.gz"
