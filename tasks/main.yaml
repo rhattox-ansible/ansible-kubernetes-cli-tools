@@ -1,30 +1,30 @@
-- name: Starting kubernetes cli tools installation
+- name: Display installation start message
   ansible.builtin.debug:
     msg:
       - "=================================================="
       - "Starting kubernetes cli tools installation..."
       - "=================================================="
 
-- name: "Setup: Create Temporary Directory"
+- name: Prepare temporary directory
   ansible.builtin.include_tasks: 1-setup_temporary_folder.yaml
 
-- name: "Download: All CLI Tool Releases"
+- name: Download CLI tool archives
   ansible.builtin.include_tasks: 2-download_files.yaml
 
-- name: "Extract: All CLI Tool Archives"
+- name: Extract CLI tool archives
   ansible.builtin.include_tasks: 3-extract_files.yaml
 
-- name: "Copy: All CLI Tool Binaries to Install Path"
+- name: Copy CLI tool binaries to install path
   ansible.builtin.include_tasks: 4-copy_files.yaml
 
-- name: "Post-Install: Finalize Installation"
+- name: Include post-installation tasks
   ansible.builtin.include_tasks: 5-post_install.yaml
 
-- name: "Cleanup: Remove Temporary Files"
+- name: Remove temporary directory
   ansible.builtin.include_tasks: 6-cleanup.yaml
 
 
-- name: Kubernetes installation completed successfully
+- name: Display installation completion message
   ansible.builtin.debug:
     msg:
       - "=================================================="

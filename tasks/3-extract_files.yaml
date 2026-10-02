@@ -1,39 +1,39 @@
-- name: "Extract: CLI Tool Archives"
+- name: Extract CLI tool archives
   block:
-    - name: "Extract: Create helm Extraction Directory"
+    - name: Create Helm extraction directory
       ansible.builtin.file:
         path: "{{ temporary_folder }}/helm"
         state: directory
         mode: "0755"
 
-    - name: "Extract: Unarchive kubectx Tarball"
+    - name: Extract kubectx archive
       ansible.builtin.unarchive:
         src: "{{ temporary_folder }}/kubectx.tar.gz"
         dest: "{{ temporary_folder }}/"
         remote_src: true
         mode: "0755"
 
-    - name: "Extract: Unarchive kubens Tarball"
+    - name: Extract kubens archive
       ansible.builtin.unarchive:
         src: "{{ temporary_folder }}/kubens.tar.gz"
         dest: "{{ temporary_folder }}/"
         remote_src: true
         mode: "0755"
 
-    - name: "Extract: Unarchive helm Tarball"
+    - name: Extract Helm archive
       ansible.builtin.unarchive:
         src: "{{ temporary_folder }}/helm.tar.gz"
         dest: "{{ temporary_folder }}/helm"
         remote_src: true
         mode: "0755"
 
-    - name: "Extract: Create stern Extraction Directory"
+    - name: Create stern extraction directory
       ansible.builtin.file:
         path: "{{ temporary_folder }}/stern"
         state: directory
         mode: "0755"
 
-    - name: "Extract: Unarchive stern Tarball"
+    - name: Extract stern archive
       ansible.builtin.unarchive:
         src: "{{ temporary_folder }}/stern.tar.gz"
         dest: "{{ temporary_folder }}/stern"
