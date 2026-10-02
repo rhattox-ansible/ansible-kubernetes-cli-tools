@@ -1,6 +1,11 @@
-- name: ContainerD helm Installation
+- name: K8s CLI Tools Installation
   hosts: localhost
   become: true
   gather_facts: true
-  roles:
-    - setup
+
+  vars_files:
+    - defaults/main.yaml
+
+  tasks:
+    - name: Run the kubernetes cli tools installation workflow
+      ansible.builtin.include_tasks: "tasks/main.yaml"

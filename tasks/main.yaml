@@ -1,3 +1,10 @@
+- name: Starting kubernetes cli tools installation
+  ansible.builtin.debug:
+    msg:
+      - "=================================================="
+      - "Starting kubernetes cli tools installation..."
+      - "=================================================="
+
 - name: "Setup: Create Temporary Directory"
   ansible.builtin.include_tasks: setup_temporary_folder.yaml
 
@@ -15,3 +22,11 @@
 
 - name: "Cleanup: Remove Temporary Files"
   ansible.builtin.include_tasks: cleanup.yaml
+
+
+- name: Kubernetes installation completed successfully
+  ansible.builtin.debug:
+    msg:
+      - "=================================================="
+      - "kubernetes cli tools installation completed successfully."
+      - "=================================================="
