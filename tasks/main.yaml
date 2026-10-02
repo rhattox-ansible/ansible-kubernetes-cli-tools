@@ -6,22 +6,22 @@
       - "=================================================="
 
 - name: "Setup: Create Temporary Directory"
-  ansible.builtin.include_tasks: setup_temporary_folder.yaml
+  ansible.builtin.include_tasks: 1-setup_temporary_folder.yaml
 
 - name: "Download: All CLI Tool Releases"
-  ansible.builtin.include_tasks: download_files.yaml
+  ansible.builtin.include_tasks: 2-download_files.yaml
 
 - name: "Extract: All CLI Tool Archives"
-  ansible.builtin.include_tasks: extract_files.yaml
+  ansible.builtin.include_tasks: 3-extract_files.yaml
 
 - name: "Copy: All CLI Tool Binaries to Install Path"
-  ansible.builtin.include_tasks: copy_files.yaml
+  ansible.builtin.include_tasks: 4-copy_files.yaml
 
 - name: "Post-Install: Finalize Installation"
-  ansible.builtin.include_tasks: post_install.yaml
+  ansible.builtin.include_tasks: 5-post_install.yaml
 
 - name: "Cleanup: Remove Temporary Files"
-  ansible.builtin.include_tasks: cleanup.yaml
+  ansible.builtin.include_tasks: 6-cleanup.yaml
 
 
 - name: Kubernetes installation completed successfully
